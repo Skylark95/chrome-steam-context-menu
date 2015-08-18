@@ -1,7 +1,7 @@
 {
   "name": "Steam Context Menu",
   "description": "Search Steam using the context menu",
-  "version": "1.0",
+  "version": "1.0.1",
   "permissions": ["contextMenus"],
   "icons": {
     "16": "icon-bitty.png",
