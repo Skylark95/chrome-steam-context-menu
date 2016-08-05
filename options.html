@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><title>Steam Context Menu</title></head>
+<style>
+  .option {
+    margin-bottom: 1em;
+  }
+  input[type="checkbox"] {
+    margin-right: 0.5em;
+  }
+</style>
+<body>
+<div style="margin: 10px 0 10px 0;">
+  <p>
+    Choose which context menus to enable.<br>
+    To disable the parent menu, select only one option.<br>
+  </p>
+  <div class="option">
+    <label>
+      <input type="checkbox" id="b_steam" />
+      <strong>Steam</strong> -
+      <a target="_blank" href="http://store.steampowered.com/search/">http://store.steampowered.com/search/</a>
+    </label>
+  </div>
+  <div class="option">
+    <label>
+      <input type="checkbox" id="b_steamdb" />
+      <strong>Steam DB</strong> -
+      <a target="_blank" href="https://steamdb.info/search/">https://steamdb.info/search/</a>
+    </label>
+  </div>
+  <div class="option">
+    <label>
+      <input type="checkbox" id="b_options" />
+      <strong>Change Menus</strong> -
+      Opens this options page
+    </label>
+  </div>
+</div>
+<small>Changes are saved automatically.</small>
+<script src="options.js"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
   "name": "Steam Context Menu",
   "description": "Search Steam using the context menu",
   "version": "1.1.0",
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "storage"],
   "icons": {
     "16": "icon-bitty.png",
     "48": "icon-small.png",
@@ -10,6 +10,10 @@
   },
   "background": {
     "scripts": ["steamContextMenu.js"]
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
   },
   "manifest_version": 2
 }
