@@ -41,7 +41,7 @@ function create_steam_menu() {
 
 function create_steamdb_menu() {
   chrome.contextMenus.create({
-    "title": "Search Steam DB for '%s'",
+    "title": "Search SteamDB for '%s'",
     "contexts": ["selection"],
     "onclick": function (info) {
         chrome.tabs.create({url: 'https://steamdb.info/search/?q=' + encodeURIComponent(info.selectionText)});
