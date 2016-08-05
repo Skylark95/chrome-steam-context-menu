@@ -15,5 +15,6 @@
     "page": "options.html",
     "chrome_style": true
   },
+  "minimum_chrome_version": "42",
   "manifest_version": 2
 }
