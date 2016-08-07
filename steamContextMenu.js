@@ -1,6 +1,7 @@
 var options = {
       b_steam: true,
       b_steamdb: true,
+      b_steamdb_instant: false,
       b_options: true
     };
 
@@ -40,11 +41,12 @@ function create_steam_menu() {
 }
 
 function create_steamdb_menu() {
+  var steamdb_url = options.b_steamdb_instant ? 'https://steamdb.info/instantsearch/?idx=steamdb&q=' : 'https://steamdb.info/search/?q=';
   chrome.contextMenus.create({
     "title": "Search SteamDB for '%s'",
     "contexts": ["selection"],
     "onclick": function (info) {
-        chrome.tabs.create({url: 'https://steamdb.info/search/?q=' + encodeURIComponent(info.selectionText)});
+        chrome.tabs.create({url: steamdb_url + encodeURIComponent(info.selectionText)});
     }
   });
 }

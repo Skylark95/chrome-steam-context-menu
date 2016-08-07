@@ -2,15 +2,21 @@
 <html>
 <head><title>Steam Context Menu</title></head>
 <style>
+  body {
+    font-size: small;
+  }
   .option {
-    margin-bottom: 1em;
+    margin-bottom: .6em;
+  }
+  .clearfix {
+    overflow: auto;
   }
   input[type="checkbox"] {
     margin-right: 0.5em;
   }
 </style>
 <body>
-<div style="margin: 10px 0 10px 0;">
+<div style="margin-bottom: 10px;">
   <p>
     Choose which context menus to enable.<br>
     To disable the parent menu, select only one option.<br>
@@ -19,14 +25,20 @@
     <label>
       <input type="checkbox" id="b_steam" />
       <strong>Steam</strong> -
-      <a target="_blank" href="http://store.steampowered.com/search/">http://store.steampowered.com/search/</a>
+      <a target="_blank" href="http://store.steampowered.com/">http://store.steampowered.com/</a>
     </label>
   </div>
   <div class="option">
     <label>
       <input type="checkbox" id="b_steamdb" />
       <strong>SteamDB</strong> -
-      <a target="_blank" href="https://steamdb.info/search/">https://steamdb.info/search/</a>
+      <a target="_blank" href="https://steamdb.info/">https://steamdb.info/</a>
+    </label>
+  </div>
+  <div class="option" style="margin-left: 25px;">
+    <label>
+      <input type="checkbox" id="b_steamdb_instant" />
+      Use <a target="_blank" href="https://steamdb.info/instantsearch/">Instant Search</a> <em>(Beta)</em>
     </label>
   </div>
   <div class="option">
@@ -37,7 +49,14 @@
     </label>
   </div>
 </div>
-<small>Changes are saved automatically.</small>
+<div class="clearfix" style="font-size: smaller; margin-top: 20px;">
+  <span style="float: left">Changes are saved automatically.</span>
+  <span style="float: right">
+    <a target="_blank" href="https://github.com/Skylark95/chrome-steam-context-menu/releases">
+      Version <span id="version"></span>
+    </a>
+  </span>
+</div>
 <script src="options.js"></script>
 </body>
 </html>
