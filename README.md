@@ -15,14 +15,14 @@ This extension also goes well with the following extensions:
 * [Enhanced Steam](https://www.enhancedsteam.com/)
 * [Steam Database](https://steamdb.info/extension/)
 
-Disclaimer: I am not the author for either of the above extensions.  Steam Context Menu and other extensions linked on this page are not affiliated with Valve, Steam, or any of their partners. 
+Disclaimer: I am not the author for either of the above extensions.  Steam Context Menu and other extensions linked on this page are not affiliated with Valve, Steam, or any of their partners.
 
 ### Screenshots
 #### All options enabled
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/steam-db/screenshots/screenshot_all.jpg)
+![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_all.jpg)
 
 #### Steam only option
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/steam-db/screenshots/screenshot_steam.jpg)
+![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_steam.jpg)
 
 #### Options page
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/steam-db/screenshots/screenshot_options.jpg)
+![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_options.jpg)
