@@ -1,13 +1,13 @@
 Steam Context Menu
 ------------------
 
-Search for games on [Steam](http://store.steampowered.com/) or [SteamDB](https://steamdb.info/) using the context menu in Google Chrome.
+Search for games on [Steam](http://store.steampowered.com/), [SteamDB](https://steamdb.info/), or [IsThereAnyDeal](https://isthereanydeal.com/) using the context menu in Google Chrome.
 
 ### Use case
 When viewing games from retailers other than Steam, select the game title text, right click and select "Search Steam".  Helpful for when you want to check if you already own a game or want to view the game listing on Steam for reviews, price, screenshots, etc.
 
 ### Features
-* Search selected text on [Steam](http://store.steampowered.com/) or [SteamDB](https://steamdb.info/).
+* Search selected text on [Steam](http://store.steampowered.com/), [SteamDB](https://steamdb.info/), or [IsThereAnyDeal](https://isthereanydeal.com/).
 * Change visible menus with the option to collapse the parent menu when only one option is selected.
 
 ### Recommended Extensions
