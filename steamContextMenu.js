@@ -2,6 +2,7 @@ var options = {
       b_steam: true,
       b_steamdb: true,
       b_steamdb_instant: false,
+      b_isthereanydeal: true,
       b_options: true
     };
 
@@ -23,6 +24,9 @@ function update_menus(results) {
     }
     if (options.b_steamdb) {
       create_steamdb_menu();
+    }
+    if (options.b_isthereanydeal) {
+      create_isthereanydeal_menu();
     }
     if (options.b_options) {
       create_options_menu();
@@ -48,6 +52,16 @@ function create_steamdb_menu() {
     "onclick": function (info) {
         chrome.tabs.create({url: steamdb_url + encodeURIComponent(info.selectionText)});
     }
+  });
+}
+
+function create_isthereanydeal_menu() {
+  chrome.contextMenus.create({
+      "title": "Search IsThereAnyDeal for '%s'",
+      "contexts": ["selection"],
+      "onclick": function (info) {
+          chrome.tabs.create({url: 'https://isthereanydeal.com/#/search:' + encodeURIComponent(info.selectionText) + ';/scroll:%23gamelist'});
+      }
   });
 }
 
