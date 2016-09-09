@@ -26,3 +26,6 @@ Disclaimer: I am not the author for either of the above extensions.  Steam Conte
 
 #### Options page
 ![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_options.jpg)
+
+### License
+[GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
