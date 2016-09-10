@@ -1,5 +1,5 @@
 function save_options() {
-  chrome.storage.sync.set({
+  chrome.storage.local.set({
     b_steam: document.getElementById('b_steam').checked,
     b_steamdb: document.getElementById('b_steamdb').checked,
     b_steamdb_instant: document.getElementById('b_steamdb_instant').checked,
@@ -9,10 +9,7 @@ function save_options() {
 }
 
 function restore_options() {
-  var manifest = chrome.runtime.getManifest();
-  document.getElementById('version').innerHTML = manifest.version;
-
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     b_steam: true,
     b_steamdb: true,
     b_steamdb_instant: false,

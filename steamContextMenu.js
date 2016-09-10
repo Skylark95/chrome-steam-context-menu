@@ -6,7 +6,7 @@ var options = {
       b_options: true
     };
 
-chrome.storage.sync.get(options, update_menus);
+chrome.storage.local.get(options, update_menus);
 chrome.storage.onChanged.addListener(options_changed);
 
 function options_changed(changes, areaName) {

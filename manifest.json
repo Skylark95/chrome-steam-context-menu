@@ -1,8 +1,14 @@
 {
   "name": "Steam Context Menu",
   "description": "Search Steam using the context menu",
-  "version": "1.2.0",
-  "permissions": ["contextMenus", "storage"],
+  "version": "1.2.1",
+  "applications": {
+    "gecko": {
+      "id": "steam-context-menu@skylark95.com",
+      "strict_min_version": "48.0"
+    }
+  },
+  "permissions": ["contextMenus", "storage", "tabs"],
   "icons": {
     "16": "icon-bitty.png",
     "48": "icon-small.png",
@@ -12,9 +18,7 @@
     "scripts": ["steamContextMenu.js"]
   },
   "options_ui": {
-    "page": "options.html",
-    "chrome_style": true
+    "page": "options.html"
   },
-  "minimum_chrome_version": "42",
   "manifest_version": 2
 }
