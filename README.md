@@ -1,7 +1,11 @@
 Steam Context Menu
 ------------------
 
-Search for games on [Steam](http://store.steampowered.com/), [SteamDB](https://steamdb.info/), or [IsThereAnyDeal](https://isthereanydeal.com/) using the context menu in Google Chrome.
+Search for games on [Steam](http://store.steampowered.com/), [SteamDB](https://steamdb.info/), or [IsThereAnyDeal](https://isthereanydeal.com/) using the context menu in Google Chrome or Firefox.
+
+### Download
+ * [Chrome Web Store](https://chrome.google.com/webstore/detail/steam-context-menu/mcglhmpnpongdigcmccjallgoinlklnj?hl=en)
+ * [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/steam-context-menu/)
 
 ### Use case
 When viewing games from retailers other than Steam, select the game title text, right click and select "Search Steam".  Helpful for when you want to check if you already own a game or want to view the game listing on Steam for reviews, price, screenshots, etc.
