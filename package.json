@@ -1,0 +1,20 @@
+{
+  "name": "dev-server",
+  "version": "0.0.1",
+  "description": "Test server for development",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skylark95/chrome-steam-context-menu.git"
+  },
+  "author": "derek@skylark95.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Skylark95/chrome-steam-context-menu/issues"
+  },
+  "homepage": "https://github.com/Skylark95/chrome-steam-context-menu#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "request": "^2.74.0"
+  }
+}
