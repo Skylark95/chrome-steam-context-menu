@@ -11,10 +11,12 @@ function buildTable(data) {
 
   var options = {
     data: data,
+    deferRender: true,
     columns: [
       { data: 'name' }
     ],
-    pageLength: 25
+    pageLength: 20,
+    lengthMenu: [[10, 20, 50, 100, -1], [10, 20, 50, 100, "All"]]
   };
   if (window.location.search) {
     var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
