@@ -4,13 +4,17 @@ function writeJSON(result) {
   var out = [];
   $games = $(result).find('gamesList games game');
   $games.each(function() {
-    $game = $(this);
+    var $game = $(this);
+    var name = '<a href="http://store.steampowered.com/app/';
+    name += $game.find('appID').text();
+    name += '"target="_blank">';
+    name += $game.find('name').text();
+    name += '</a>';
+
     out.push({
-      appID: $game.find('appID').text(),
-      name: $game.find('name').text()
+      name: name
     });
+
   });
-  document.open();
-  document.write('<pre>' + JSON.stringify(out) + '</pre>');
-  document.close();
+  console.log(JSON.stringify(out));
 }
