@@ -1,4 +1,4 @@
-$.get('/view/games.xml', '', buildTable, 'xml');
+$.get('/api/games.xml', '', buildTable, 'xml');
 
 function buildTable(result) {
   console.log(result);
