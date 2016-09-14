@@ -13,7 +13,8 @@ function buildTable(data) {
     data: data,
     columns: [
       { data: 'name' }
-    ]
+    ],
+    pageLength: 25
   };
   if (window.location.search) {
     var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
