@@ -4,19 +4,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Chrome Steam Hover</title>
+    <title>Steam Context Menu - Owned Games</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/datatables.min.css" />
+    <style>
+        .table tbody tr {
+            background-color: #dff0d8;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #607D8B;
+            border-bottom: 2px solid #DDD;
+        }
+
+        .jumbotron {
+          padding-top: 10px;
+          padding-bottom: 20px;
+          background-color: #455A64;
+          color: #fff;
+        }
+        .jumbotron small {
+          color: #ccc;
+        }
+        a {
+          color: #6b6b6b
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container" style="margin-top: 50px;">
+    <div class="jumbotron">
+        <div class="container">
+            <h2><img src="images/icon-small.png" /> Steam Context Menu <small>Owned Games</small></h2>
+        </div>
+    </div>
+    <div class="container">
         <table id="games" class="table table-bordered">
             <thead>
-                <tr>
-                    <td>Name</td>
-                </tr>
+                <th>Name</th>
             </thead>
             <tbody>
             </tbody>

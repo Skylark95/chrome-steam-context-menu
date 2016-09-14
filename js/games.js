@@ -15,8 +15,8 @@ function buildTable(data) {
     columns: [
       { data: 'name' }
     ],
-    pageLength: 20,
-    lengthMenu: [[10, 20, 50, 100, -1], [10, 20, 50, 100, "All"]]
+    pageLength: 15,
+    lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]]
   };
   if (window.location.search) {
     var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
