@@ -8,5 +8,18 @@ function buildTable(result) {
     html += '</tr>';
     $table.append(html);
   });
-  $table.parent().DataTable();
+
+  var options = {};
+  if (window.location.search) {
+    var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
+        query = window.location.search.match(queryRegex);
+
+    if (query) {
+      options.search = {
+        "search": decodeURIComponent(query[1])
+      };
+    }
+  }
+
+  $table.parent().DataTable(options);
 }
