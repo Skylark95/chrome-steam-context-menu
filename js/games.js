@@ -1,14 +1,12 @@
-$.get('/api/games.xml', '', buildTable, 'xml');
+$.get('/api/games.json', '', buildTable, 'json');
 
 function buildTable(result) {
-  console.log(result);
-  $games = $(result).find('gamesList games game');
-  $games.each(function() {
-    $game = $(this);
+  $table = $('#games tbody');
+  result.forEach(function(game) {
     var html = '<tr>';
-    html += '<td>' + $game.find('appID').text() + '</td>';
-    html += '<td>' + $game.find('name').text() + '</td>';
+    html += '<td><a href="http://store.steampowered.com/app/' + game.appID + '"target="_blank">' + game.name + '</a></td>';
     html += '</tr>';
-    $('#games tbody').append(html);
+    $table.append(html);
   });
+  $table.parent().DataTable();
 }
