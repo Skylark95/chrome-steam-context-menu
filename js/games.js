@@ -14,7 +14,13 @@ function buildTable(data) {
   };
   if (window.location.search) {
     var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
-        query = window.location.search.match(queryRegex);
+        userRegex = new RegExp("^\\?.*u=([^&]*).*$"),
+        query = window.location.search.match(queryRegex),
+        user = window.location.search.match(userRegex);
+
+    if (user) {
+      $("#user").val(decodeURIComponent(user[1]));
+    }
 
     if (query) {
       options.search = {
