@@ -1,18 +1,12 @@
 $.get('/api/games.json', '', buildTable, 'json');
 
 function buildTable(data) {
-  $table = $('#games tbody');
-  // result.forEach(function(game) {
-  //   var html = '<tr>';
-  //   html += '<td><a href="http://store.steampowered.com/app/' + game.appID + '"target="_blank">' + game.name + '</a></td>';
-  //   html += '</tr>';
-  //   $table.append(html);
-  // });
-
+  var $table = $('#games tbody');
   var options = {
     data: data,
     deferRender: true,
     columns: [
+      { data: 'appID', width: '45px' },
       { data: 'name' }
     ],
     pageLength: 15,

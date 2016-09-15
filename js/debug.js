@@ -5,13 +5,15 @@ function writeJSON(result) {
   $games = $(result).find('gamesList games game');
   $games.each(function() {
     var $game = $(this);
-    var name = '<a href="http://store.steampowered.com/app/';
-    name += $game.find('appID').text();
-    name += '"target="_blank">';
-    name += $game.find('name').text();
-    name += '</a>';
+    var name = $game.find('name').text();
+    var appID = '<a href="http://store.steampowered.com/app/';
+    appID += $game.find('appID').text();
+    appID += '"target="_blank">';
+    appID += $game.find('appID').text();
+    appID += '</a>';
 
     out.push({
+      appID: appID,
       name: name
     });
 
