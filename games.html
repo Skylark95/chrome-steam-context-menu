@@ -22,16 +22,24 @@
         }
 
         .jumbotron {
-          padding-top: 10px;
-          padding-bottom: 20px;
-          background-color: #455A64;
-          color: #fff;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            background-color: #455A64;
+            color: #fff;
         }
+
         .jumbotron small {
-          color: #ccc;
+            color: #ccc;
         }
+
         td {
-          color: #6b6b6b
+            color: #6b6b6b
+        }
+
+        .vcenter {
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
         }
     </style>
 </head>
@@ -39,7 +47,21 @@
 <body>
     <div class="jumbotron">
         <div class="container">
-            <h2><img src="images/icon-small.png" /> Steam Context Menu <small>Owned Games</small></h2>
+            <div class="row">
+                <div class="col-xs-8">
+                    <h2><img src="images/icon-small.png" /> Steam Context Menu <small>Owned Games</small></h2>
+                </div>
+                <div class="col-xs-4" style="margin-top: 5px;">
+                    <form class="form-inline">
+                        <div class="form-group pull-right">
+                            <h2>
+                                <input type="text" class="form-control input-sm" placeholder="Steam Username">
+                                <button type="button" class="btn btn-primary">Load Games</button>
+                            </h2>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
