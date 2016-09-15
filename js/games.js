@@ -1,7 +1,8 @@
 $.get('/api/games.json', '', buildTable, 'json');
+$('#load').click(loadGamesForUser);
 
 function buildTable(data) {
-  var $table = $('#games tbody');
+  var $tbody = $('#games tbody');
   var options = {
     data: data,
     deferRender: true,
@@ -20,14 +21,22 @@ function buildTable(data) {
 
     if (user) {
       $("#user").val(decodeURIComponent(user[1]));
-    }
 
-    if (query) {
-      options.search = {
-        search: decodeURIComponent(query[1])
-      };
+      if (query) {
+        options.search = {
+          search: decodeURIComponent(query[1])
+        };
+      }
+      $tbody.parent().removeClass('hidden');
+      $tbody.parent().DataTable(options);
+    } else {
+      $('#no-username').removeClass('hidden');
     }
+  } else {
+    $('#no-username').removeClass('hidden');
   }
+}
 
-  $table.parent().DataTable(options);
+function loadGamesForUser() {
+  console.log('load clicked!');
 }
