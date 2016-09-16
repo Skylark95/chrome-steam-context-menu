@@ -1,37 +1,33 @@
+var params = window.location.search ? new URLSearchParams(window.location.search.slice(1)) : new URLSearchParams('');
+
 $.get('/api/games.json', '', buildTable, 'json');
 $('#load').click(loadGamesForUser);
 
 function buildTable(data) {
-  var $tbody = $('#games tbody');
-  var options = {
-    data: data,
-    deferRender: true,
-    columns: [
-      { data: 'appID', width: '45px' },
-      { data: 'name' }
-    ],
-    pageLength: 15,
-    lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]]
-  };
-  if (window.location.search) {
-    var queryRegex = new RegExp("^\\?.*q=([^&]*).*$"),
-        userRegex = new RegExp("^\\?.*u=([^&]*).*$"),
-        query = window.location.search.match(queryRegex),
-        user = window.location.search.match(userRegex);
+  var $tbody = $('#games tbody'),
+      user = params.get('u'),
+      query = params.get('q'),
+      options = {
+        data: data,
+        deferRender: true,
+        columns: [
+          { data: 'appID', width: '45px' },
+          { data: 'name' }
+        ],
+        pageLength: 15,
+        lengthMenu: [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]]
+      };
 
-    if (user) {
-      $("#user").val(decodeURIComponent(user[1]));
+  if (user) {
+    $("#user").val(user);
 
-      if (query) {
-        options.search = {
-          search: decodeURIComponent(query[1])
-        };
-      }
-      $tbody.parent().removeClass('hidden');
-      $tbody.parent().DataTable(options);
-    } else {
-      $('#no-username').removeClass('hidden');
+    if (query) {
+      options.search = {
+        search: query
+      };
     }
+    $tbody.parent().removeClass('hidden');
+    $tbody.parent().DataTable(options);
   } else {
     $('#no-username').removeClass('hidden');
   }
