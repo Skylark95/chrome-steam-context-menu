@@ -1,7 +1,11 @@
 var params = window.location.search ? new URLSearchParams(window.location.search.slice(1)) : new URLSearchParams('');
 
 $.get('/api/games.json', '', buildTable, 'json');
-$('#load').click(loadGamesForUser);
+
+$('#user-form').on('submit', function(e) {
+  e.preventDefault();
+  loadGamesForUser(this.user.value);
+});
 
 function buildTable(data) {
   var $tbody = $('#games tbody'),
@@ -19,7 +23,7 @@ function buildTable(data) {
       };
 
   if (user) {
-    $("#user").val(user);
+    $("#user-form input[name='user']").val(user);
 
     if (query) {
       options.search = {
@@ -33,6 +37,7 @@ function buildTable(data) {
   }
 }
 
-function loadGamesForUser() {
-  console.log('load clicked!');
+function loadGamesForUser(user) {
+  params.set('u', user);
+  window.location.assign(window.location.pathname + '?' + params.toString());
 }
