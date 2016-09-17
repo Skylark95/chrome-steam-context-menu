@@ -1,2 +1,6 @@
 bin/
 node_modules/
+bower_components/
+js/vendor.min.js
+css/vendor.min.css
+fonts/
