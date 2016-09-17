@@ -6,7 +6,6 @@ var plugins = require("gulp-load-plugins")({
 
 gulp.task('default', ['js', 'css', 'fonts']);
 gulp.task('js', function() {
-  console.log(plugins.mainBowerFiles('**/*.min.js'));
   return gulp.src(plugins.mainBowerFiles('**/*.min.js'))
     .pipe(plugins.concat('vendor.min.js'))
     .pipe(gulp.dest('./src/js/'));
