@@ -9,14 +9,14 @@ gulp.task('js', function() {
   console.log(plugins.mainBowerFiles('**/*.min.js'));
   return gulp.src(plugins.mainBowerFiles('**/*.min.js'))
     .pipe(plugins.concat('vendor.min.js'))
-    .pipe(gulp.dest('./js/'));
+    .pipe(gulp.dest('./src/js/'));
 });
 gulp.task('css', function() {
   return gulp.src(plugins.mainBowerFiles('**/*.min.css'))
     .pipe(plugins.concat('vendor.min.css'))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./src/css/'));
 });
 gulp.task('fonts', function() {
   return gulp.src(plugins.mainBowerFiles('**/fonts/**'))
-    .pipe(gulp.dest('./fonts/'));
+    .pipe(gulp.dest('./src/fonts/'));
 });

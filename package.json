@@ -4,7 +4,8 @@
   "description": "Search Steam using the context menu",
   "main": "index.js",
   "scripts": {
-    "install": "bower install && gulp"
+    "install": "bower install && gulp",
+    "zip": "cd src && zip -r chrome-steam-context-menu.zip . && mv chrome-steam-context-menu.zip .."
   },
   "repository": {
     "type": "git",
