@@ -1,5 +1,9 @@
 var params = window.location.search ? new URLSearchParams(window.location.search.slice(1)) : new URLSearchParams('');
 
+chrome.runtime.sendMessage({user: 'test'}, function(response) {
+  console.log(response.data);
+});
+
 $.get('/api/games.json', '', buildTable, 'json');
 
 $('#user-form').on('submit', function(e) {
