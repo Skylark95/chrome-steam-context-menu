@@ -47,10 +47,8 @@
 
 <body>
     <div class="jumbotron">
-
         <div class="container">
             <div class="row">
-
                 <div class="col-xs-8">
                     <h2><img src="images/icon-small.png" /> Steam Context Menu <small>Owned Games</small></h2>
                 </div>
@@ -68,7 +66,9 @@
         </div>
     </div>
     <div class="container" style="margin-top: 50px;">
-
+        <div id="loading" style="margin: 10px;">
+          <img src="images/loading.gif" class="img-responsive center-block" alt="Loading" />
+        </div>
         <div id="no-username" class="alert alert-info hidden" role="alert">
           <h3 style="margin: 10px; text-align: center;">Enter your Steam Username above and click <strong>Load Games</strong> to continue.</h3>
         </div>
@@ -81,7 +81,6 @@
             </tbody>
         </table>
     </div>
-
     <script type="text/javascript" src="js/vendor.min.js"></script>
     <script type="text/javascript" src="js/games.js"></script>
 
