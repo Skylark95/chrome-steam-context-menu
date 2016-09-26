@@ -1,5 +1,6 @@
 var options = {
       b_steam: true,
+      b_mygames: true,
       b_steamdb: true,
       b_steamdb_instant: false,
       b_isthereanydeal: true,
@@ -22,6 +23,9 @@ function update_menus(results) {
     if (options.b_steam) {
       create_steam_menu();
     }
+    if (options.b_mygames) {
+      create_mygames_menu();
+    }
     if (options.b_steamdb) {
       create_steamdb_menu();
     }
@@ -40,6 +44,22 @@ function create_steam_menu() {
       "contexts": ["selection"],
       "onclick": function (info) {
           chrome.tabs.create({url: 'http://store.steampowered.com/search/?term=' + encodeURIComponent(info.selectionText)});
+      }
+  });
+}
+
+function create_mygames_menu() {
+  chrome.contextMenus.create({
+      "title": "Search My Games for '%s'",
+      "contexts": ["selection"],
+      "onclick": function (info) {
+        chrome.storage.local.get({user: false}, function(items) {
+          var url = 'games.html?q=' + encodeURIComponent(info.selectionText);
+          if (items.user) {
+            url += '&u=' + items.user;
+          }
+          chrome.tabs.create({url: url});
+        });
       }
   });
 }
