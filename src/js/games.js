@@ -41,6 +41,7 @@ function buildTable(data) {
     };
   }
   $('#loading').addClass('hidden');
+  $('#beta-warning').removeClass('hidden');
   $tbody.parent().removeClass('hidden');
   $tbody.parent().DataTable(options);
 }
