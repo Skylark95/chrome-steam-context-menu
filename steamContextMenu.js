@@ -60,7 +60,7 @@ function create_isthereanydeal_menu() {
       "title": "Search IsThereAnyDeal for '%s'",
       "contexts": ["selection"],
       "onclick": function (info) {
-          chrome.tabs.create({url: 'https://isthereanydeal.com/#/search:' + encodeURIComponent(info.selectionText) + ';/scroll:%23gamelist'});
+          chrome.tabs.create({url: 'https://isthereanydeal.com/#/filter:&search/' + encodeURIComponent(info.selectionText) + ';/scroll:%23gamelist'});
       }
   });
 }
