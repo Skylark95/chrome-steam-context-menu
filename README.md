@@ -23,13 +23,13 @@ Disclaimer: I am not the author for either of the above extensions.  Steam Conte
 
 ### Screenshots
 #### All options enabled
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_all.jpg)
+![](screenshots/screenshot_all.jpg)
 
 #### Steam only option
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_steam.jpg)
+![](screenshots/screenshot_steam.jpg)
 
 #### Options page
-![](https://github.com/Skylark95/chrome-steam-context-menu/blob/master/screenshots/screenshot_options.jpg)
+![](screenshots/screenshot_options.jpg)
 
 ### License
 [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt)
