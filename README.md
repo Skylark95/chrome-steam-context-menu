@@ -16,7 +16,7 @@ When viewing games from retailers other than Steam, select the game title text, 
 
 ### Recommended Extensions
 This extension also goes well with the following extensions:
-* [Enhanced Steam](https://www.enhancedsteam.com/)
+* [Augmented Steam](https://augmentedsteam.com/)
 * [Steam Database](https://steamdb.info/extension/)
 
 Disclaimer: I am not the author for either of the above extensions.  Steam Context Menu and other extensions linked on this page are not affiliated with Valve, Steam, or any of their partners.
